@@ -13175,7 +13175,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13226,7 +13226,7 @@ There are 8351 total dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>                
@@ -13300,7 +13300,7 @@ There are 8351 total dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">img</span><span class="p">))</span>
@@ -13330,7 +13330,7 @@ There are 8351 total dog images.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13357,7 +13357,7 @@ There are 8351 total dog images.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># returns &quot;True&quot; if face is detected in image stored at img_path</span>
@@ -13581,7 +13581,7 @@ Percentage of human faces detected in dog images set: 0.17
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -14042,7 +14042,7 @@ Percentage of dogs detected in dog images set: 100
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -14064,7 +14064,7 @@ Percentage of dogs detected in dog images set: 100
 <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span>
 
 <span class="c1"># convert data to a normalized torch.FloatTensor</span>
-<span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">224</span><span class="p">),</span>
+<span class="n">common_transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">224</span><span class="p">),</span>
                                 <span class="n">transforms</span><span class="o">.</span><span class="n">CenterCrop</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span><span class="mi">224</span><span class="p">)),</span>
                                 <span class="n">transforms</span><span class="o">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span> <span class="c1"># randomly flip and rotate</span>
                                 <span class="n">transforms</span><span class="o">.</span><span class="n">RandomRotation</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
@@ -15036,11 +15036,31 @@ Test Accuracy: 13% (117/836)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Why is your transfer learning architecture suitable for this task? Why did your chosen architecture with transfer learning work, and earlier attempts using a custom neural net not work nearly as well? What is so special about transfer learning?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> 
-Slected model for transfer learning is Resnet 18
-Reason to select this model: Followed my intution as i have failed in the replication of Vgg16 whn creating a CNN from Scratch.
+Selected model for transfer learning is Resnet 18</p>
+<p>Why is your transfer learning architecture suitable for this task?:
+  Followed my intution as i have failed in the replication of Vgg16 whn creating a CNN from Scratch.
 Thought Resnet18 will be more helpful in this sigment.
 Also considered the input transormations resuse.</p>
+<p>Why did your chosen architecture with transfer learning work, and earlier attempts using a custom neural net not work nearly as well?:</p>
+<p>To answer this uestion, i can share my experience with the trail attempt on replication of vgg16 kind of network.
+When Creating CNN classifier from scratch in my classowrk, I have attempted multiple archutectures.
+One such is resplicating and shortening version of vgg16 with lesser than 10 layers.
+There due to High Size of input kernels like 9x9 kernels the Learning is at very slower rates due to number of paramters and Model is highly overfitting.</p>
+<p>I have read some papers on resnet50  network, but it will be too big for training and using here for the dog breed classfier.
+So that  have choosen the smaller versio resnet18 which performed well.</p>
+<p>What is so special about transfer learning?</p>
+<p>The main advantage of Transfer learning lies in its already learned kernel.
+These kernels are already able to see bunch of different features from the input images and able to classify at a good level.
+The Only exra step needed is to fine tune the model as per the current task.</p>
 <p>Process of using Resnet:
 Applied the concepts learned in the Transfer learning classes in Udacity.
 Have taken out the final layer and added the New Final fully connected layer with the needed Output classes
